@@ -10,7 +10,7 @@ export default function Item({ content, isDone, id, toggleTodo, deleteTodo }: pr
     return (
         <li className="list-group-item d-flex justify-content-between align-items-center">
             {isDone ? <div className="form-check">
-                <input className="form-check-input me-2" type="checkbox" onChange={() => { toggleTodo(id) }} />
+                <input className="form-check-input me-2" type="checkbox" checked = {isDone} onChange={() => { toggleTodo(id) }} />
                 <s className="task-name">{content}</s>
             </div> : <div className="form-check">
                 <input className="form-check-input me-2" type="checkbox" onChange={() => { toggleTodo(id) }} />
